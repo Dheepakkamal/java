@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Car extends EngineMethods {
+public class Car extends CarMethods{
     private Body body;
     private Engine engine;
 
