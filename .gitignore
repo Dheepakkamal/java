@@ -12,3 +12,5 @@
 *.class
 .idea/uiDesigner.xml
 .idea/uiDesigner.xml
+*.class
+*.class
