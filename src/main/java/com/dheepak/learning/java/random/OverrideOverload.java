@@ -7,6 +7,10 @@ class ClassA {
     ClassA() {
         System.out.println("Constructor ClassA");
     }
+
+    void whereAmI() {
+        System.out.println("I am in class A");
+    }
 }
 class ClassB extends ClassA {
     ClassB() {
@@ -15,6 +19,10 @@ class ClassB extends ClassA {
     static {
         System.out.println("Static at class B");
     }
+
+    void whereAmI() {
+        System.out.println("I am in class B");
+    }
 }
 public class OverrideOverload {
     static {
@@ -22,6 +30,8 @@ public class OverrideOverload {
     }
 
     public static void main(String[] args) {
-        ClassB classARef = new ClassB();
+
+        ClassA classARef = new ClassB();
+        classARef.whereAmI();
     }
 }
