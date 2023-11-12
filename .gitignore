@@ -15,3 +15,7 @@
 *.class
 *.class
 .idea/sonarlint/securityhotspotstore/e/1/e1ade26513ab1b85f1c51150ca99f42e4bb3e6d7
+*.pb
+*.pb
+*.pb
+*.pb
