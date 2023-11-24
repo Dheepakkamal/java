@@ -22,6 +22,7 @@ class ClassB extends ClassA {
 
     void whereAmI() {
         System.out.println("I am in class B");
+        super.whereAmI();
     }
 }
 public class OverrideOverload {
@@ -31,7 +32,6 @@ public class OverrideOverload {
 
     public static void main(String[] args) {
 
-        ClassA classARef = new ClassB();
-        classARef.whereAmI();
+        ClassB classARef = new ClassB();
     }
 }

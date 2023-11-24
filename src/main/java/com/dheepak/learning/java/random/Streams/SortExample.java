@@ -22,5 +22,6 @@
 //        Collections.sort(songs);
 //        Collections.sort(songs, new Comparator);
 //        System.out.println(songs);
+//        songs.stream().
 //    }
 //}
