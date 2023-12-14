@@ -3,3 +3,4 @@
 /.idea/sonarlint/*
 .idea/uiDesigner.xml
 *.class
+*.pb
