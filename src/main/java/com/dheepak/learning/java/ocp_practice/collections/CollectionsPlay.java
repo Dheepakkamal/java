@@ -10,10 +10,11 @@ public class CollectionsPlay {
         Collection<String> collectionOfNames = new ArrayList<>();
         Collections.addAll(collectionOfNames, "Alice", "Bob", "Tom","Dick","Harriet");
         System.out.println(collectionOfNames);
+        var iter = collectionOfNames.iterator();
 
-        while(collectionOfNames.iterator().hasNext()){
-            System.out.println(collectionOfNames);
-        }
+        iter.forEachRemaining(s ->
+            System.out.println(s.toUpperCase())
+        );
     }
 
 }
