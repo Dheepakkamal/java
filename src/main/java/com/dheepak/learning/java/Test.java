@@ -13,15 +13,26 @@ public class Test {
         bookList.add(new Book("ABC", "XYZ", 5));
         bookList.add(new Book("ABC", "XYZ", 5));
         return bookList;
+    }
+
+    private static Set<Book> getBookSet() {
+        Set<Book> bookSet = new HashSet<>();
+        bookSet.add(new Book("The Alchemist", "Paulo Coelho", 1));
+        bookSet.add(new Book("Harry Potter", "J.K. Rowling", 2));
+        bookSet.add(new Book("Narnia", "J.K. Rowling", 3));
+        bookSet.add(new Book("XYZ", "ABC", 4));
+        bookSet.add(new Book("ABC", "XYZ", 5));
+        bookSet.add(new Book("ABC", "XYZ", 5));
+        return bookSet;
 
     }
     public static void main(String[] args) {
-//        var bookList = getBookList();
-//        System.out.println(bookList);
-//        Collections.sort(bookList);
-//        System.out.println(bookList);
+        var bookList = getBookList();
+        System.out.println(bookList);
+        Collections.sort(bookList);
+        System.out.println(getBookSet());
+        Collections.sort(bookList);
 
-        List<Node> nodeList = new ArrayList<>();
 
 //        TestLinkedList testLinkedList = new TestLinkedList(new);
 //        var paranthesisMap = new HashMap<>();
