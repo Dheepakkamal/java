@@ -29,9 +29,20 @@ public class StreamsMain {
                 .collect(Collectors.groupingBy(Employee::getDepartment,
                        Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))));
         System.out.println(departmentHighSalaryEmployeeMap);
-
-        var highSalaryMap = employees.stream()
+        Map<String, Employee> highSalaryMap = employees.stream()
                 .collect(Collectors.toMap(Employee::getDepartment, Function.identity(), BinaryOperator.maxBy(Comparator.comparingDouble(Employee::getSalary))));
         System.out.println(highSalaryMap);
+
+        var depSalMap = employees.stream().collect(Collectors.groupingBy(Employee::getDepartment,
+                Collectors.collectingAndThen(
+                        Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)),
+                        optEmployee -> optEmployee.map(Employee::getSalary).orElse(0.0)
+                )));
+
+        System.out.println(depSalMap);
+
+        System.out.println(employees.stream().mapToDouble(Employee::getSalary).reduce(0.0, (sum, employee) -> sum + employee));
+
+
     }
 }
