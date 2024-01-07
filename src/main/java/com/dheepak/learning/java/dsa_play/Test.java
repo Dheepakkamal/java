@@ -1,4 +1,4 @@
-package com.dheepak.learning.java;
+package com.dheepak.learning.java.dsa_play;
 
 import java.util.*;
 

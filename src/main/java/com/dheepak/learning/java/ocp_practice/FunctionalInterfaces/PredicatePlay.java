@@ -26,7 +26,7 @@ public class PredicatePlay {
         System.out.println("Case-insensitive palindromes: " + palindromesB);
         System.out.println("-----------Using Lambda Expressions--------------------");
         Predicate<String> predicate1 = str ->
-                str.equals(new StringBuilder(str).reverse().toString());          // (3)
+                str.contentEquals(new StringBuilder(str).reverse());          // (3)
         List<String> palindromes1 = filterList(words, predicate1);            // (4)
         System.out.println("Case-sensitive palindromes:   " + palindromes1);
         Predicate<String> predicate2 = str ->

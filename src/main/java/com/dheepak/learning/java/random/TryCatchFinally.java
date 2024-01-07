@@ -4,21 +4,33 @@ public class TryCatchFinally {
 
     public static void main(String[] args) {
 
-//        try {
-//            System.exit(0);
-//            System.out.println("In try");
-//        } catch (Exception e) {
-//            System.out.println("In catch");
-//        } finally {
-//            System.out.println("In finally");
-//        }
-
-        System.out.println(trycatch());
         try {
+            int a =  2 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println(1);
+        }
+        finally {
+            System.out.println(0);
+        }
+
+        try {
+//            System.exit(0);
+            System.out.println("In try");
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.println("In catch");
             return;
         } finally {
-            System.out.println("in finally");
+            System.out.println("In finally");
+            return;
         }
+
+//        System.out.println(trycatch());
+//        try {
+//            return;
+//        } finally {
+//            System.out.println("in finally");
+//        }
 
     }
 

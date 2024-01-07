@@ -2,6 +2,8 @@ package com.dheepak.learning.java.ocp_practice.collections;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class ListPlay {
     private static List<Integer> getDistinctList() {
@@ -40,6 +42,12 @@ public class ListPlay {
         list.removeAll(getRetainItemsList());
 //        list.addAll(getRetainItemsList());
         System.out.println(list);
+
+        String str = "bananas";
+        Character c = 'n';
+        System.out.println(IntStream.range(0, str.length())
+                .filter(a -> str.charAt(a) == c).boxed()
+                .collect(Collectors.toList()));
 
 
     }

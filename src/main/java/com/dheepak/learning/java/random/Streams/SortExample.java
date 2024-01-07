@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class SortExample {
 
@@ -18,9 +19,13 @@ public class SortExample {
         return songs;
     }
     public static void main(String[] args) {
-        List<String> songs = getSongsList();
-        Collections.sort(songs);
-        Collections.sort(songs, String::compareTo);
-        System.out.println(songs);
+//        List<String> songs = getSongsList();
+//        Collections.sort(songs);
+//        Collections.sort(songs, String::compareTo);
+//        System.out.println(songs);
+
+        Stream.of(1, 1, 2, 3, 5)
+                .peek(System.out::println)
+                .count();
     }
 }

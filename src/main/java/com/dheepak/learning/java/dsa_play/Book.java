@@ -1,6 +1,5 @@
-package com.dheepak.learning.java;
+package com.dheepak.learning.java.dsa_play;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
